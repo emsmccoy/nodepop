@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>
+    <%= title %>
+  </title>
+
+  <link rel="stylesheet" href="./stylesheets/style.css">
+
+</head>
+
+<body>
+
+  <%- include('./header.ejs') %>
+
+    <main>
+      <section>
+        <% ads.forEach(element=> { %>
+          <article>
+            <% if (element.item) {%>
+              <h2 class="articleTitle">Item: <%= element.item %>
+              </h2>
+              <%}%>
+                <% if (element.photo) {%>
+                  <img class="articleImg" src="/images/anuncios/<%= element.photo%>" alt="<%= element.photo%>">
+                  </picture>
+                  <%}%>
+                    <% if (element.sale) {%>
+                      <% if (element.sale===true) { %>
+                        <h4 class="sale">Selling</h4>
+                        <% } else { %>
+                          <h4 class="sale">Buying</h4>
+                          <%}%>
+                            <%}%>
+                              <% if (element.tags) {%>
+                                <p class="tags">Tags</p>
+                                <p>
+                                  <% element.tags.forEach(tag=> {%>
+                                    <span>
+                                      <%=tag%> ;
+                                    </span>
+                                    <%})%>
+                                </p>
+                                <%}%>
+                                  <% if (element.price) {%>
+                                    <h3 class="Price">price</h3>
+                                    <p class="priceElement">
+                                      <%= element.price %>
+                                    </p>
+                                    <%}%>
+
+          </article>
+          <hr />
+          <% }); %>
+      </section>
+    </main>
+
+</body>
+
+</html>

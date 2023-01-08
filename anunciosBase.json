@@ -1,0 +1,24 @@
+{
+  "advertisements": [
+    {
+      "item": "Bike",
+      "sale": true,
+      "price": 230.15,
+      "photo": "bike.jpeg",
+      "tags": [
+        "lifestyle",
+        "motor"
+      ]
+    },
+    {
+      "item": "iPhone",
+      "sale": false,
+      "price": 50.00,
+      "photo": "iphone.jpeg",
+      "tags": [
+        "lifestyle",
+        "mobile"
+      ]
+    }
+  ]
+}

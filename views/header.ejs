@@ -1,0 +1,38 @@
+<header>
+  <div class="titlePage">
+    <%= title %>
+  </div>
+
+
+  <aside>
+    <form id="formFilterPagination" name="formFilterPagination" action="/" method="get">
+      <nav>
+        <section>
+          <h4>URL supported search filters:</h4>
+          <ul class="filters">
+            <li>tag</li>
+            <li>selling/buying</li>
+            <li>price</li>
+            <li>item</li>
+            <hr>
+            <li>Use "sort" for sorting and "fields" for field selection</li>
+            <li>Use "skip" and "limit" for pagination</li>
+          </ul>
+        </section>
+        <section>
+
+          <label for="artPerPage">
+            <h4>
+              <% if (limit && limit<ads.length) {%>
+                <%= limit %> Elements in this page out of <%=ads.length%>
+                    <%} else {%>
+                      <%= ads.length %> Elements in this page%>
+                        <%}%>
+            </h4>
+          </label>
+
+        </section>
+      </nav>
+    </form>
+  </aside>
+</header>
