@@ -1,6 +1,6 @@
 # NODEPOP
 API for a second hand ads website, created using Express, Node.js and mongoDB.
-Relatable actions: edit, delete and filter ads.  
+Available actions: edit, delete and filter ads.  
  
 ## Install dependencies
 `npm install` 
