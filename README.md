@@ -1,5 +1,5 @@
 # NODEPOP
-API for a second hand ads portal, created using Express, Node.js and mongoDB.
+API for a second hand ads website, created using Express, Node.js and mongoDB.
 Relatable actions: edit, delete and filter ads.  
  
 ## Install dependencies
@@ -51,7 +51,7 @@ Ask the API for the service at the url /images/announcements/*filename.extension
 For example: `http://localhost:3000/images/anuncios/bike.jpeg`.  
 
 ---
-## Number of elements per tag allowed
+## Number of elements allowed per tag
 Returns an object with the allowed tags and how many ads of each tag are contained in the database.  
 `http://localhost:3000/api/alltags`  
 **Attention:** not to be confused with the call to get the ads containing a given ad containing a given tag, which would be  
